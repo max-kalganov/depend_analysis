@@ -1,0 +1,10 @@
+library(olsrr)
+
+
+model <- lm(mpg ~ disp + hp, data = mtcars)
+k <- ols_step_all_possible(model)
+k
+
+# plot
+plot(k)
+
